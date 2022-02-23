@@ -5,11 +5,16 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>MedRide Medicaid Transportation | Pueblo Colorado | Southern Colorado</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <header>
+        <Header />
+      </header>
+      <body className='h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-4xl'>
+        <p>Creating a NavBar</p>
+      </body>
     </div>
   )
 }
