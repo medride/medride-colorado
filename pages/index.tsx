@@ -2,6 +2,10 @@ import Head from 'next/head'
 import Header from '../components/Header'
 
 export default function Home() {
+  const smallHero = '/img/medride-hero-mobile.jpg'
+  const mediumHero = '/img/medride-hero-medium.jpg'
+  const largeHero = '/img/medride-hero.jpg'
+
   return (
     <div className="">
       <Head>
@@ -12,9 +16,13 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <div className='h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-4xl font-display'>
-        <p>Creating a NavBar</p>
-      </div>
+
+      {/* Hero Image */}
+      <picture>
+        <source srcSet={smallHero} media="(max-width: 500px)"/> {/* Mobile-first render */}
+        <source srcSet={mediumHero} media="(max-width: 700px)"/> {/* Large Mobile render */}
+        <img srcSet={largeHero} /> {/* Desktop render */}
+      </picture>
     </div>
   )
 }

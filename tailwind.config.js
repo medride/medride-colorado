@@ -14,6 +14,9 @@ module.exports = {
       'body': ['"Open Sans"',],
     },
     extend: {
+      backgroundImage: {
+        'hero-image-home': "url('/img/medride-hero.jpg')",
+      }
     }
   },
   plugins: [],
