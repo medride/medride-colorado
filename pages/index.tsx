@@ -12,9 +12,9 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <body className='h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-4xl'>
+      <div className='h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-4xl font-display'>
         <p>Creating a NavBar</p>
-      </body>
+      </div>
     </div>
   )
 }
