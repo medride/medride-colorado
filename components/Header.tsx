@@ -20,13 +20,13 @@ const Header = () => {
                 <img src="/medride-colorado-logo.png" className="pr-2"/>
 
                 {/* Desktop menus */}
-                <div className="hidden xl:flex space-x-8 items-center pr-2">
+                <div className="hidden xl:flex space-x-8 items-center pr-2 xl:pr-10">
                     {/* primary nav */}
                     <div>
-                        <ul className="uppercase space-x-10 text-xl text-gray-700 font-medium"> 
+                        <ul className="uppercase space-x-6 2xl:pr-16 2xl:space-x-16 text-xl text-gray-700 font-medium"> 
                             {links.map((link)=>(
                                 <Link key={link.name} href={link.link}>
-                                    <a className="hover:text-orange-500">{link.name}</a>
+                                    <a className="hover:text-orange-500 hover:underline hover:font-medium">{link.name}</a>
                                 </Link>
                             ))}
                         </ul>
@@ -60,7 +60,7 @@ const Header = () => {
                                 key={link.name} 
                                 href={link.link}
                             >
-                                <a className="block py-2 hover:text-gray-900">{link.name}</a>
+                                <a className="block py-2 hover:text-gray-800 hover:underline hover:font-bold">{link.name}</a>
                             </Link>
                         ))}
                     </ul>

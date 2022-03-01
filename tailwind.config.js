@@ -16,6 +16,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-image-home': "url('/img/medride-hero.jpg')",
+        'decorator': "url('/img/background-decorator.jpg)",
+      },
+      width: {
+        'svg-separator-width': '102vw'
       }
     }
   },
