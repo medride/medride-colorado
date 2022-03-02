@@ -17,6 +17,7 @@ module.exports = {
       backgroundImage: {
         'hero-image-home': "url('/img/medride-hero.jpg')",
         'decorator': "url('/img/background-decorator.jpg)",
+        'decorator2': "url('/img/background-decorator2.png)",
       },
       width: {
         'svg-separator-width': '102vw'

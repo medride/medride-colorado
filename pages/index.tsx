@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import FaqBox from './FaqBox'
+import FaqBox from '../components/faqBox'
 
 export default function Home() {
   const smallHero = '/img/medride-hero-mobile.jpg'
@@ -15,10 +14,6 @@ export default function Home() {
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-        <Header />
-      </header>
 
       {/* Hero Image */}
       <picture>
