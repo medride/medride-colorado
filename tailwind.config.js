@@ -21,6 +21,9 @@ module.exports = {
       },
       width: {
         'svg-separator-width': '102vw'
+      },
+      spacing: {
+        '75vh': '75vh'
       }
     }
   },

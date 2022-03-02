@@ -7,10 +7,10 @@ const Navbar = () => {
   const links = [
     { name: 'Home', link: '/' },
     { name: 'Schedule a Ride', link: '/schedule-a-ride' },
-    { name: 'Service Areas', link: '/' },
-    { name: 'Forms', link: '/' },
+    { name: 'Service Areas', link: '/service-areas' },
+    { name: 'Forms', link: '/forms' },
     { name: 'Employment', link: '/employment' },
-    { name: 'Contact Us', link: '/' },
+    { name: 'Contact Us', link: '/contact-us' },
   ]
 
   return (
@@ -81,7 +81,10 @@ const Navbar = () => {
           <ul className="px-8 py-2 text-lg font-medium uppercase text-gray-50">
             {links.map((link) => (
               <Link key={link.name} href={link.link}>
-                <a className="block py-2 hover:font-bold hover:text-gray-800 hover:underline">
+                <a
+                  className="block py-2 hover:font-bold hover:text-gray-800 hover:underline"
+                  onClick={() => setOpen(false)}
+                >
                   {link.name}
                 </a>
               </Link>
