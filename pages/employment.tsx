@@ -21,13 +21,22 @@ const employment = () => {
             <ul className="list-inside list-disc text-xl">
               <li className="pb-2">
                 <a
-                  href="/docs/Non-Emergency-Driver-Job-Description.docx"
+                  href="/docs/Non-Emergency-Driver-Job-Description.pdf"
                   className="font-bold text-sky-500 hover:text-sky-400"
+                  target="_blank"
                 >
                   Non-Emergency Medical Driver Job Description
                 </a>
               </li>
-              <li>Customer Service Representative Job Description</li>
+              <li>
+                <a
+                  href="/docs/Customer-Service-Representative-Job-Description.pdf"
+                  className="font-bold text-sky-500 hover:text-sky-400"
+                  target="_blank"
+                >
+                  Customer Service Representative Job Description
+                </a>
+              </li>
             </ul>
           </div>
 
