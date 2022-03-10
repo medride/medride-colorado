@@ -6,10 +6,10 @@ const employment = () => {
           Employment
         </h1>
       </div>
-      <div className="bg-[url('/img/background-decorator2.png')] lg:h-screen">
+      <div className="bg-[url('/img/background-decorator2.png')] pb-6 lg:pb-14 xl:h-75vh ">
         <div className="mx-auto flex w-3/4 flex-col justify-between pt-10 lg:max-w-6xl lg:flex-row lg:space-x-16 lg:pt-16">
           {/* Left Column */}
-          <div className="flex-1 ">
+          <div className="flex-1">
             <h2 className="pb-4 text-2xl font-medium text-gray-800 underline">
               Open Positions
             </h2>
