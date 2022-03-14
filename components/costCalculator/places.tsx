@@ -12,10 +12,11 @@ import {
 import '@reach/combobox/styles.css'
 
 type PlacesProps = {
-  setOffice: (position: google.maps.LatLngLiteral) => void
+  setLocation: (position: google.maps.LatLngLiteral) => void
+  placeholder: string
 }
 
-const Places = ({ setOffice }: PlacesProps) => {
+const Places = ({ setLocation, placeholder }: PlacesProps) => {
   const {
     ready,
     value,
@@ -30,7 +31,7 @@ const Places = ({ setOffice }: PlacesProps) => {
 
     const results = await getGeocode({ address: val })
     const { lat, lng } = await getLatLng(results[0])
-    setOffice({ lat, lng })
+    setLocation({ lat, lng })
   }
 
   return (
@@ -39,7 +40,7 @@ const Places = ({ setOffice }: PlacesProps) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         disabled={!ready}
-        placeholder="Enter your pick-up location"
+        placeholder={placeholder}
         className="w-full p-2"
       />
       <ComboboxPopover>
