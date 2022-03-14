@@ -62,16 +62,20 @@ const Map = () => {
           placeholder="Dropoff location"
         />
         <button
-            disabled={!pickup || !dropoff ? true : false}
-            onClick={() => {
-              fetchDirections()
-              console.log('button clicked')
-            }}
-            className={`m-4 rounded-md ${(!pickup || !dropoff) ? 'bg-slate-400' : 'bg-green-500 hover:bg-green-600'}  py-4 px-8 text-white `}
-          >
-            Calculate Cost
-          </button>
-        )}
+          disabled={!pickup || !dropoff ? true : false}
+          onClick={() => {
+            fetchDirections()
+            console.log('button clicked')
+          }}
+          className={`m-4 rounded-md ${
+            !pickup || !dropoff
+              ? 'bg-slate-400'
+              : 'bg-green-500 hover:bg-green-600'
+          }  py-4 px-8 text-white `}
+        >
+          Calculate Cost
+        </button>
+        {directions && <Distance leg={directions.routes[0].legs[0]} />}
       </div>
       <div className="h-screen w-4/5">
         <GoogleMap
@@ -83,7 +87,17 @@ const Map = () => {
         >
           {pickup && <Marker position={pickup} />}
           {dropoff && <Marker position={dropoff} />}
-          {directions && <DirectionsRenderer directions={directions} />}
+          {directions && (
+            <DirectionsRenderer
+              directions={directions}
+              options={{
+                polylineOptions: {
+                  strokeColor: '#ed8936',
+                  strokeWeight: 5,
+                },
+              }}
+            />
+          )}
         </GoogleMap>
       </div>
     </div>
