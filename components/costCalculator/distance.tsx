@@ -17,7 +17,9 @@ const Distance = ({ leg }: DistanceProps) => {
   return (
     <div className="text-xl text-white">
       <p>Route distance: {distanceInMiles.toFixed(2)} miles.</p>
-      <p>Cost of trip: $ {cost.toFixed(2)}</p>
+      <p>
+        Cost of trip: <span>{new Intl.NumberFormat().format(cost)}</span>
+      </p>
     </div>
   )
 }

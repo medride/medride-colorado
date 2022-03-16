@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 type FormData = {
@@ -7,12 +8,28 @@ type FormData = {
 }
 
 const ContactUs = () => {
+  const [submitted, setSubmitted] = useState(false)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>()
-  const onSubmit = handleSubmit((data) => console.log(data))
+  const onSubmit = handleSubmit((data) => {
+    console.log('Sending: ', data)
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log('Message sent!')
+        setSubmitted(true)
+      }
+    })
+  })
 
   return (
     <div>
@@ -24,11 +41,7 @@ const ContactUs = () => {
       <div className="bg-[url('/img/background-decorator.jpg')] bg-cover">
         <div className="mx-auto w-10/12 pb-8 pt-14 text-xl md:w-1/2">
           <p className="mb-6 text-6xl font-bold uppercase">Let's Talk</p>
-          <form
-            onSubmit={onSubmit}
-            action="https://formsubmit.co/medridetech@gmail.com"
-            method="POST"
-          >
+          <form onSubmit={onSubmit}>
             <div className="mb-8 flex flex-col justify-between space-y-4 md:flex-row md:space-x-8 md:space-y-0">
               <div className="flex-1">
                 <input
