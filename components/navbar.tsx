@@ -8,6 +8,7 @@ const Navbar = () => {
   const links = [
     { name: 'Home', link: '/' },
     { name: 'Schedule a Ride', link: '/schedule-a-ride' },
+    { name: 'Private Pay', link: '/private-pay' },
     { name: 'Service Area', link: '/service-area' },
     { name: 'Forms', link: '/forms' },
     { name: 'Employment', link: '/employment' },
@@ -20,13 +21,20 @@ const Navbar = () => {
       <nav className="flex flex-col">
         <div className="flex items-center justify-between px-8 py-6">
           {/* logo */}
-          <img src="/medride-colorado-logo.svg" className="h-10 pr-2 md:h-14" />
+          <Link href="/">
+            <a>
+              <img
+                src="/medride-colorado-logo.svg"
+                className="h-10 pr-2 md:h-14"
+              />
+            </a>
+          </Link>
 
           {/* Desktop menus */}
-          <div className="hidden items-center space-x-8 pr-2 xl:flex xl:pr-10">
+          <div className="hidden items-center space-x-8 pr-2 xl:flex 2xl:pr-24">
             {/* primary nav */}
             <div>
-              <ul className="space-x-6 text-xl font-medium uppercase text-gray-700 2xl:space-x-16 2xl:pr-16">
+              <ul className="space-x-4 text-xl font-medium uppercase text-gray-700 xl:space-x-5 xl:text-lg 2xl:space-x-10 2xl:text-xl">
                 {links.map((link) => (
                   <Link key={link.name} href={link.link}>
                     <a className="hover:font-medium hover:text-orange-500 hover:underline">

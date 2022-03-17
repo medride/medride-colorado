@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function NotificationBar() {
   return (
-    <div className="flex w-full justify-between bg-gray-800 py-2 px-8 text-white md:py-3 lg:pr-10 lg:pl-10 2xl:pr-32">
+    <div className="flex w-full items-center justify-between bg-gray-800 py-2 px-8 text-white lg:pr-10 lg:pl-10 2xl:pr-32">
       {/* Information */}
       <div className="flex items-center space-x-2 lg:space-x-6">
         {/* Phone */}
