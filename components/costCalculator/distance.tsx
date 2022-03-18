@@ -12,13 +12,17 @@ const Distance = ({ leg }: DistanceProps) => {
 
   const distanceInMiles = (leg.distance?.value / 1000) * 0.6214
   const cost = distanceInMiles > 15 ? 50 + (distanceInMiles - 15) * 4 : 50
+  const costTwoDecimals = +cost.toFixed(2)
+  console.log(typeof costTwoDecimals)
 
   console.log('Distance in kilometers:', leg.distance?.value)
   return (
-    <div className="text-xl text-white">
-      <p>Route distance: {distanceInMiles.toFixed(2)} miles.</p>
+    <div className="text-xl font-medium text-orange-500">
+      {/* The code commented out below would show the route distance. I'm saving it incase we want to use it one day.
+      <p>Route distance: {distanceInMiles.toFixed(2)} miles.</p> */}
       <p>
-        Cost of trip: <span>{new Intl.NumberFormat().format(cost)}</span>
+        Cost of trip: <span>$</span>
+        <span>{new Intl.NumberFormat().format(costTwoDecimals)}</span>
       </p>
     </div>
   )

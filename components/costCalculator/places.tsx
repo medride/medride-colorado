@@ -41,7 +41,7 @@ const Places = ({ setLocation, placeholder }: PlacesProps) => {
         onChange={(e) => setValue(e.target.value)}
         disabled={!ready}
         placeholder={placeholder}
-        className="w-full p-2"
+        className="mb-2 w-full bg-gray-100 px-2 py-3 placeholder-gray-800 "
       />
       <ComboboxPopover>
         <ComboboxList>

@@ -35,7 +35,7 @@ function NotificationBar() {
         </p>
       </div>
       {/* Social Media  */}
-      <div className="flex space-x-4">
+      <div className="flex space-x-3 md:space-x-4">
         <Link href="https://www.instagram.com/medridetransportation/">
           <a target="_blank">
             <svg

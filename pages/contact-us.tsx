@@ -48,6 +48,7 @@ const ContactUs = () => {
                   className="w-full border-2 py-4 pl-4 "
                   placeholder="Name"
                   {...register('name', { required: true, maxLength: 50 })}
+                  disabled={submitted}
                 />
                 {errors.name?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
@@ -71,6 +72,7 @@ const ContactUs = () => {
                     pattern:
                       /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,
                   })}
+                  disabled={submitted}
                 />
                 {errors.email?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
@@ -91,17 +93,26 @@ const ContactUs = () => {
                   placeholder="Message"
                   rows={10}
                   {...register('message', { required: true, maxLength: 5000 })}
+                  disabled={submitted}
                 />
                 {errors.message?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
                     A message is required
                   </span>
                 )}
+                {submitted && (
+                  <span className="bg text-green-500">
+                    Message successfully sent!
+                  </span>
+                )}
               </div>
             </div>
             <button
               type="submit"
-              className="bg-green-400 py-4 px-6 text-xl font-medium text-white"
+              className={`${
+                submitted ? 'bg-slate-400' : 'bg-green-400'
+              } py-4 px-6 text-xl font-medium text-white`}
+              disabled={submitted}
             >
               Submit
             </button>

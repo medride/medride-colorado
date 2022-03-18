@@ -45,39 +45,8 @@ const Map = () => {
   }
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/5 bg-gray-900 p-4">
-        <h1>Controls</h1>
-        <Places
-          setLocation={(position) => {
-            setPickup(position)
-            mapRef.current?.panTo(position)
-          }}
-          placeholder="Pickup Location"
-        />
-        <Places
-          setLocation={(position) => {
-            setDropoff(position)
-          }}
-          placeholder="Dropoff location"
-        />
-        <button
-          disabled={!pickup || !dropoff ? true : false}
-          onClick={() => {
-            fetchDirections()
-            console.log('button clicked')
-          }}
-          className={`m-4 rounded-md ${
-            !pickup || !dropoff
-              ? 'bg-slate-400'
-              : 'bg-green-500 hover:bg-green-600'
-          }  py-4 px-8 text-white `}
-        >
-          Calculate Cost
-        </button>
-        {directions && <Distance leg={directions.routes[0].legs[0]} />}
-      </div>
-      <div className="h-screen w-4/5">
+    <div className="flex h-screen flex-col">
+      <div className="h-2/5 w-auto">
         <GoogleMap
           zoom={11}
           center={center}
@@ -99,6 +68,36 @@ const Map = () => {
             />
           )}
         </GoogleMap>
+      </div>
+      <div className="h-1/2 bg-white p-4">
+        <Places
+          setLocation={(position) => {
+            setPickup(position)
+            mapRef.current?.panTo(position)
+          }}
+          placeholder="Pick Up Location"
+        />
+        <Places
+          setLocation={(position) => {
+            setDropoff(position)
+          }}
+          placeholder="Drop Off Location"
+        />
+        {directions && <Distance leg={directions.routes[0].legs[0]} />}
+        <button
+          disabled={!pickup || !dropoff ? true : false}
+          onClick={() => {
+            fetchDirections()
+            console.log('button clicked')
+          }}
+          className={`mt-4 rounded-md ${
+            !pickup || !dropoff
+              ? 'bg-slate-400'
+              : 'bg-green-500 hover:bg-green-600'
+          }  py-4 px-8 text-white `}
+        >
+          Calculate Cost
+        </button>
       </div>
     </div>
   )
