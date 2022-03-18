@@ -22,7 +22,7 @@ const ServiceAreas = () => {
         className="mx-auto"
       />
       {/* Table */}
-      <div className="mx-auto flex w-5/6 flex-col justify-center py-6 pl-24 text-2xl md:w-3/4 md:flex-row lg:space-x-28">
+      <div className="mx-auto flex w-5/6 flex-col justify-center py-6 pl-24 text-2xl md:w-3/4 md:flex-row md:space-x-12 md:pl-10 lg:space-x-20 xl:space-x-28">
         <div>
           <ul className="list-outside list-disc">
             <li className="pb-2 md:pb-0">Alamosa</li>

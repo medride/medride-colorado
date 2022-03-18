@@ -9,7 +9,7 @@ function ScheduleARide() {
         </h1>
       </div>
       <div className="bg-[url('/img/background-decorator2.png')] pb-4 lg:h-screen">
-        <div className="mx-auto flex w-3/4 flex-col lg:w-5/12">
+        <div className="mx-auto flex w-3/4 flex-col xl:w-5/12">
           <p className="pt-10 pb-8 text-center text-xl font-bold lg:pt-16 lg:text-3xl">
             PLEASE CONTACT MEDRIDE TRANSPORTATION TO SCHEDULE A RIDE. FOR ANY
             ADDITIONAL QUESTIONS YOU CAN CONTACT US AT:
@@ -26,27 +26,27 @@ function ScheduleARide() {
           <p className="text-xl">
             To schedule your service, please have the following information
             ready:
-            <ul className="list-disc pl-2">
-              <li className="pb-4 pt-6 lg:pb-2 lg:pt-4">
-                Your{' '}
-                <span className="font-bold">
-                  Health First Colorado ID (Medicaid ID)
-                </span>{' '}
-                number, name, and date of birth.
-              </li>
-              <li className="pb-4 lg:pb-2">
-                The <span className="font-bold">pickup address</span> of where
-                we will be picking you up.
-              </li>
-              <li className="pb-4 lg:pb-2">
-                The <span className="font-bold">doctor’s name</span> and{' '}
-                <span className="font-bold">address</span> as well as a{' '}
-                <span className="font-bold">telephone number</span> for
-                confirmation of your appointment.
-              </li>
-              <li>The date and time of your medical appointment.</li>
-            </ul>
           </p>
+          <ul className="list-disc pl-2">
+            <li className="pb-4 pt-6 lg:pb-2 lg:pt-4">
+              Your{' '}
+              <span className="font-bold">
+                Health First Colorado ID (Medicaid ID)
+              </span>{' '}
+              number, name, and date of birth.
+            </li>
+            <li className="pb-4 lg:pb-2">
+              The <span className="font-bold">pickup address</span> of where we
+              will be picking you up.
+            </li>
+            <li className="pb-4 lg:pb-2">
+              The <span className="font-bold">doctor’s name</span> and{' '}
+              <span className="font-bold">address</span> as well as a{' '}
+              <span className="font-bold">telephone number</span> for
+              confirmation of your appointment.
+            </li>
+            <li>The date and time of your medical appointment.</li>
+          </ul>
         </div>
       </div>
     </div>

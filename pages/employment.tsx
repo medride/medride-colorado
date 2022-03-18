@@ -6,10 +6,10 @@ const employment = () => {
           Employment
         </h1>
       </div>
-      <div className="bg-[url('/img/background-decorator2.png')] lg:h-screen">
+      <div className="bg-[url('/img/background-decorator2.png')] pb-6 lg:pb-14 xl:h-75vh ">
         <div className="mx-auto flex w-3/4 flex-col justify-between pt-10 lg:max-w-6xl lg:flex-row lg:space-x-16 lg:pt-16">
           {/* Left Column */}
-          <div className="flex-1 ">
+          <div className="flex-1">
             <h2 className="pb-4 text-2xl font-medium text-gray-800 underline">
               Open Positions
             </h2>
@@ -21,13 +21,22 @@ const employment = () => {
             <ul className="list-inside list-disc text-xl">
               <li className="pb-2">
                 <a
-                  href="/docs/Non-Emergency-Driver-Job-Description.docx"
+                  href="/docs/Non-Emergency-Driver-Job-Description.pdf"
                   className="font-bold text-sky-500 hover:text-sky-400"
+                  target="_blank"
                 >
                   Non-Emergency Medical Driver Job Description
                 </a>
               </li>
-              <li>Customer Service Representative Job Description</li>
+              <li>
+                <a
+                  href="/docs/Customer-Service-Representative-Job-Description.pdf"
+                  className="font-bold text-sky-500 hover:text-sky-400"
+                  target="_blank"
+                >
+                  Customer Service Representative Job Description
+                </a>
+              </li>
             </ul>
           </div>
 

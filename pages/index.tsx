@@ -32,6 +32,15 @@ export default function Home() {
         </svg>
       </div> */}
 
+      <div className="flex flex-col bg-orange-500 pt-6 pb-8 text-center text-2xl text-white">
+        <p className="pb-4 italic  underline md:pb-2">Offering:</p>
+        <div className="flex flex-col justify-evenly space-y-4 font-bold uppercase  md:flex-row md:space-y-0">
+          <span>Doctors Appointments</span>
+          <span>Urgent Care</span>
+          <span>Specialty Appointments</span>
+        </div>
+      </div>
+
       <section className="mx-auto flex max-w-6xl flex-col space-x-0 py-16 px-10 md:px-20 lg:flex-row lg:space-x-14 xl:px-0">
         <div className="left-half flex-1">
           <h2 className="mb-5 text-3xl font-extrabold text-orange-500 lg:text-4xl">
