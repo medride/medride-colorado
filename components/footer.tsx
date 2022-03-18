@@ -2,7 +2,7 @@ import React from 'react'
 
 const footer = () => {
   return (
-    <div className="flex flex-col justify-around space-y-10 bg-gray-800 px-10 py-8 text-xl text-white xl:flex-row md:space-y-0">
+    <div className="flex flex-col justify-around space-y-10 bg-gray-800 px-10 py-8 text-xl text-white xl:flex-row xl:space-y-0">
       <div>
         <img src="/medride-colorado-logo.svg" className="h-10 pr-2 md:h-14" />
       </div>
