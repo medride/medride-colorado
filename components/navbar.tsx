@@ -7,7 +7,7 @@ const Navbar = () => {
   const links = [
     { name: 'Home', link: '/' },
     { name: 'Schedule a Ride', link: '/schedule-a-ride' },
-    { name: 'Service Areas', link: '/service-areas' },
+    { name: 'Service Area', link: '/service-area' },
     { name: 'Forms', link: '/forms' },
     { name: 'Employment', link: '/employment' },
     { name: 'Contact Us', link: '/contact-us' },
