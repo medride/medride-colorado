@@ -103,7 +103,6 @@ const Map = () => {
             disabled={!pickup || !dropoff ? true : false}
             onClick={() => {
               fetchDirections()
-              console.log('button clicked')
             }}
             className={`mt-4 rounded-md md:mt-0 ${
               !pickup || !dropoff
