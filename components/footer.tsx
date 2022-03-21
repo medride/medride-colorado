@@ -3,7 +3,7 @@ import React from 'react'
 const footer = () => {
   return (
     <div className="flex flex-col bg-gray-800 py-8">
-      {/* LOGO */}
+      {/* LOGO  */}
       <div>
         <img
           src="/medride-colorado-logo.svg"
