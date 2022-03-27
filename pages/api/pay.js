@@ -1,13 +1,25 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { Client, PaymentsApi } from "square"
+import { randomUUID } from 'crypto'
+BigInt.prototype.toJSON = function () { return this.toString() }
 
-type Data = {
-  name: string
-}
+const { paymentsApi } = new Client({
+  accessToken: process.env.SQUARE_ACCESS_TOKEN,
+  environment: 'sandbox'
+})
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    const { result } = await paymentsApi.createPayment({
+      idempotencyKey: randomUUID(),
+      sourceId: req.body.sourceId,
+      amountMoney: {
+        currency: 'USD',
+        amount: `${price}`
+      }
+    })
+    console.log(result)
+    res.status(200).json(result)
+  } else {
+    res.status(500).send()
+  }
 }

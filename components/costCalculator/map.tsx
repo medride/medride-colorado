@@ -1,3 +1,6 @@
+// Documentation for this map project
+// https://www.youtube.com/watch?v=2po9_CIRW7I
+
 import { useState, useMemo, useCallback, useRef } from 'react'
 import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api'
 import Places from './places'
