@@ -3,16 +3,35 @@
 // $4.00 per mile after 15 miles
 // const cost = 50 +
 
+import { useMemo } from 'react'
+import { RootState } from '../../store'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCost } from '../../redux/cost/costSlice'
+
 type DistanceProps = {
   leg: google.maps.DirectionsLeg
 }
 
-const Distance = ({ leg }: DistanceProps) => {
+const EmployeeDistance = ({ leg }: DistanceProps) => {
   if (!leg.distance || !leg.duration) return null
 
   const distanceInMiles = (leg.distance?.value / 1000) * 0.6214
   const cost = distanceInMiles > 15 ? 50 + (distanceInMiles - 15) * 4 : 50
   const costTwoDecimals = +cost.toFixed(2)
+
+  const dispatch = useDispatch()
+  const settingCostInState = useMemo(
+    () => dispatch(setCost(costTwoDecimals)),
+    [cost]
+  )
+
+  const checkingCost = useSelector((state: RootState) => state.cost.cost)
+  console.log(checkingCost)
+
+  // BUG?
+  // when this console.log is turned on, you will see the cost logged multiple times.
+  // - What is the issue?
+  // - Can this be optimized?
 
   return (
     <div className="text-2xl font-medium text-orange-500">
@@ -22,34 +41,8 @@ const Distance = ({ leg }: DistanceProps) => {
         Estimated cost of a one-way trip: <span>$</span>
         <span>{new Intl.NumberFormat().format(costTwoDecimals)}</span>
       </p>
-
-      {/* CALL TO ACTION (TABLET & DESKTOP) */}
-      <p className="hidden lg:inline-block">
-        {' '}
-        &nbsp; | &nbsp; Call &nbsp;
-        <a
-          href="tel:7195453333"
-          className=" text-blue-500 underline hover:text-black"
-        >
-          (719) 545-3333
-        </a>{' '}
-        to schedule your trip
-      </p>
-
-      {/* CALL TO ACTION (MOBILE) */}
-      <p className="px-4 pt-4 text-center text-2xl font-normal italic  text-black md:px-0 md:text-left lg:hidden">
-        {' '}
-        Call&nbsp;
-        <a
-          href="tel:7195453333"
-          className="text-orange-500 underline hover:text-black"
-        >
-          (719) 545-3333
-        </a>{' '}
-        to schedule your trip
-      </p>
     </div>
   )
 }
 
-export default Distance
+export default EmployeeDistance
