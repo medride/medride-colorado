@@ -1,3 +1,6 @@
+// Documentation for this map project
+// https://www.youtube.com/watch?v=2po9_CIRW7I
+
 import { useState, useMemo, useCallback, useRef } from 'react'
 import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api'
 import Places from './places'
@@ -53,7 +56,7 @@ const Map = () => {
         </p>
       </div>
       {/* MAP */}
-      <div className="h-1/2 w-auto drop-shadow-xl md:order-2 md:mx-auto md:my-20 md:h-96 md:w-3/4">
+      <div className="my-0 h-1/2 w-auto drop-shadow-xl md:order-2 md:mx-auto md:my-20 md:h-96 md:w-3/4">
         <GoogleMap
           zoom={11}
           center={center}

@@ -19,7 +19,7 @@ const Distance = ({ leg }: DistanceProps) => {
       {/* The code commented out below would show the route distance. I'm saving it incase we want to use it one day.
       <p>Route distance: {distanceInMiles.toFixed(2)} miles.</p> */}
       <p className="inline-block w-full bg-orange-500 px-2 py-2 text-center text-white md:w-auto md:bg-white md:p-0 md:text-left md:text-black">
-        Estimated cost of trip: <span>$</span>
+        Estimated cost of a one-way trip: <span>$</span>
         <span>{new Intl.NumberFormat().format(costTwoDecimals)}</span>
       </p>
 
