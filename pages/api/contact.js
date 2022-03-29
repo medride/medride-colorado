@@ -16,10 +16,12 @@ export default async (req, res) => {
         await transporter.sendMail({
             from: email,
             replyTo: email,
-            to: "medride.contact.form@gmail.com",
+            to: "medridetransportation@gmail.com",
             subject: `Contact form submission from ${name}`,
-            html: `<p><strong>Message: </strong> ${message}</p>
-      `
+            html: `
+            <p><strong>From: </strong> ${email}</p>
+            <p><strong>Message: </strong> ${message}</p>
+            `
         });
     } catch (error) {
         return res.status(500).json({ error: error.message || error.toString() });
