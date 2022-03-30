@@ -1,5 +1,5 @@
 import { useLoadScript } from '@react-google-maps/api'
-import EmployeeMap from '../components/costCalculator/employeeMap'
+import EmployeeMap from '../../components/costCalculator/employeeMap'
 
 const payment = () => {
   const { isLoaded } = useLoadScript({
