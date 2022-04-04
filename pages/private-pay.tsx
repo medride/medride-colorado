@@ -38,7 +38,7 @@ const privatePay = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 pt-16 pb-10">
         <div className="mx-auto w-auto pb-8 text-gray-700 md:w-3/4">
           <div className="flex flex-col lg:flex-row lg:space-x-24">
             <div className="w-auto pb-8 lg:w-2/5 lg:pb-0">
@@ -72,104 +72,131 @@ const privatePay = () => {
               </div>
             </div>
             <div
-              id="missionAndqualities"
+              id="contractFacilityAgreements"
               className="w-auto px-8 lg:w-3/5 lg:px-0"
             >
               <h2 className="py-8 text-5xl font-medium text-orange-500">
-                MedRide's Qualities{' '}
-                <span className="font-light text-gray-400">and Mission</span>
+                <span className="font-light text-gray-400">Contract/</span>
+                Facility-Based Agreements
               </h2>
-              <div
-                id="qualitiesMobile"
-                className="flex flex-col pb-8 md:hidden"
-              >
-                <div className="flex items-center space-x-2 pb-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-orange-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-xl">Safety</p>
-                </div>
-                <div className="flex items-center space-x-2 pb-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-orange-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-xl">Empathy</p>
-                </div>
-                <div className="flex items-center space-x-2 pb-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-orange-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-xl">Reliability</p>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-orange-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-xl">Timeliness</p>
-                </div>
-              </div>
-              <div
-                id="qualitiesTabletAndLarger"
-                className="hidden w-4/5 justify-around pl-2 pb-8 font-medium text-orange-800 md:flex"
-              >
-                <p className="text-xl">Safety</p>
-                <p>|</p>
-                <p className="text-xl">Empathy</p>
-                <p>|</p>
-                <p className="text-xl">Reliability</p>
-                <p>|</p>
-                <p className="text-xl">Timeliness</p>
-              </div>
-              <div id="mission" className="pb-8 text-lg ">
+              <div id="ratesAndDrivers" className="text-lg ">
                 <p className="w-auto pb-6 lg:w-11/12">
-                  We are determined to help you get to and from your medical
-                  appointments in a safe and timely manner. We strive to provide
-                  an unequaled customer service experience that will leave you
-                  with a smile on your face.{' '}
+                  All contracted rates are negotiated with providers and
+                  facilities on as as needed basis. Please contact{' '}
+                  <a
+                    href="mailto:medridedenver@gmail.com"
+                    className="text-blue-500 underline hover:text-blue-600"
+                  >
+                    medridedenver@gmail.com
+                  </a>
+                  .
                 </p>
                 <p className="w-auto lg:w-11/12 ">
-                  By building long-lasting relationships with people like you,
-                  as well as local medical professionals, we aim to make a
-                  positive difference in our communities.
+                  It is the duty of drivers at MedRide to be compassionate,
+                  caring, reliable and responsible individuals. Our drivers are
+                  required to transport clients with mobility challenges to
+                  their destinations safely and on time.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto w-auto pb-8 text-gray-700 md:w-3/4">
+        <div
+          id="missionAndqualities"
+          className="lg:2/3 w-auto px-8 lg:px-0 xl:w-3/5"
+        >
+          <h2 className="py-8 text-5xl font-medium text-orange-500">
+            MedRide's Qualities{' '}
+            <span className="font-light text-gray-400">and Mission</span>
+          </h2>
+          <div id="qualitiesMobile" className="flex flex-col pb-8 md:hidden">
+            <div className="flex items-center space-x-2 pb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-xl">Safety</p>
+            </div>
+            <div className="flex items-center space-x-2 pb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-xl">Empathy</p>
+            </div>
+            <div className="flex items-center space-x-2 pb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-xl">Reliability</p>
+            </div>
+            <div className="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-xl">Timeliness</p>
+            </div>
+          </div>
+          <div
+            id="qualitiesTabletAndLarger"
+            className="hidden w-4/5 justify-around pl-2 pb-8 font-medium text-orange-800 md:flex"
+          >
+            <p className="text-xl">Safety</p>
+            <p>|</p>
+            <p className="text-xl">Empathy</p>
+            <p>|</p>
+            <p className="text-xl">Reliability</p>
+            <p>|</p>
+            <p className="text-xl">Timeliness</p>
+          </div>
+          <div id="mission" className="pb-8 text-lg ">
+            <p className="w-auto pb-6 lg:w-11/12">
+              We are determined to help you get to and from your medical
+              appointments in a safe and timely manner. We strive to provide an
+              unequaled customer service experience that will leave you with a
+              smile on your face.{' '}
+            </p>
+            <p className="w-auto lg:w-11/12 ">
+              By building long-lasting relationships with people like you, as
+              well as local medical professionals, we aim to make a positive
+              difference in our communities.
+            </p>
           </div>
         </div>
       </section>

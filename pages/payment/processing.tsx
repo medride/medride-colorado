@@ -1,5 +1,7 @@
+// DOCUMENTATION
+// https://www.npmjs.com/package/react-square-web-payments-sdk
+
 import Head from 'next/head'
-import Image from 'next/image'
 import {
   CreditCardInput,
   SquarePaymentsForm,
