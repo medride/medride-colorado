@@ -1,3 +1,6 @@
+// DOCUMENTATION
+// https://www.npmjs.com/package/square
+
 import { Client, PaymentsApi } from "square"
 import { randomUUID } from 'crypto'
 import { useSelector } from 'react-redux'
