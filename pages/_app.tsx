@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { useEffect } from 'react'
-import Script from 'next/script'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
+import { useEffect } from 'react'
 import * as gtag from '../lib/gtag'
 import Layout from '../components/layout'
 import { store } from '../store'
@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
       gtag.pageview(url)
