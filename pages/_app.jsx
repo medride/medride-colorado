@@ -11,14 +11,14 @@ function MyApp({ Component, pageProps }) {
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-TXMCECJXN7`}
         />
         <Script strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            gtag('config', 'G-TXMCECJXN7', {
               page_path: window.location.pathname,
             });
                 `}
