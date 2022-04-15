@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-TXMCECJXN7`}
         />
-        <Script strategy="afterInteractive">
+        <Script strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

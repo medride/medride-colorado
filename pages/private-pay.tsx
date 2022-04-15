@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useLoadScript } from '@react-google-maps/api'
 import Map from '../components/costCalculator/map'
 
@@ -10,6 +11,10 @@ const privatePay = () => {
   if (!isLoaded) return <div>Loading...</div>
   return (
     <div>
+      <Head>
+        <title>Private Pay Wheelchair Transport in Colorado</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Map />
       <section className="mx-auto -mt-28 mb-10 w-auto px-8 text-gray-700 md:mt-0 md:w-3/4 md:px-0">
         <div className="flex flex-col md:pb-10 lg:flex-row lg:space-x-6 lg:pb-16">
@@ -102,7 +107,7 @@ const privatePay = () => {
           </div>
         </div>
       </section>
-      <section className="mx-auto w-auto pb-8 text-gray-700 md:w-3/4">
+      <section className="missionAndPDF mx-auto flex w-auto flex-col space-x-4 pb-8 text-gray-700 md:w-3/4 xl:flex-row">
         <div
           id="missionAndqualities"
           className="lg:2/3 w-auto px-8 lg:px-0 xl:w-3/5"
@@ -198,6 +203,14 @@ const privatePay = () => {
               difference in our communities.
             </p>
           </div>
+        </div>
+        <div className="pdfBrochure px-8 md:py-8 lg:px-0">
+          <h2 className="pb-10 text-5xl font-medium text-orange-500 xl:text-center xl:font-light">
+            Download Our Brochure
+          </h2>
+          <a href="/docs/MedRide-Trifold-Brochure.pdf" target="_blank">
+            <img src="/img/pdf-icon.png" className="h-32 xl:mx-auto xl:h-40" />
+          </a>
         </div>
       </section>
     </div>

@@ -1,6 +1,12 @@
+import Head from 'next/head'
+
 const Forms = () => {
   return (
     <div>
+      <Head>
+        <title>Consent Form - MedRide</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="bg-orange-500">
         <h1 className="py-4 text-center text-4xl font-bold uppercase tracking-wide text-white">
           Forms
