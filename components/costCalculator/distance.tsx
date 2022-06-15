@@ -1,6 +1,6 @@
 // PRICING
 // $50 Load Fee
-// $4.00 per mile after 15 miles
+// $2.50 per mile after 10 miles
 // const cost = 50 +
 
 type DistanceProps = {
@@ -11,7 +11,7 @@ const Distance = ({ leg }: DistanceProps) => {
   if (!leg.distance || !leg.duration) return null
 
   const distanceInMiles = (leg.distance?.value / 1000) * 0.6214
-  const cost = distanceInMiles > 15 ? 50 + (distanceInMiles - 15) * 4 : 50
+  const cost = distanceInMiles > 10 ? 50 + (distanceInMiles - 15) * 2.5 : 50
   const costTwoDecimals = +cost.toFixed(2)
 
   return (
