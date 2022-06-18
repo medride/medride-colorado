@@ -11,7 +11,7 @@ const Distance = ({ leg }: DistanceProps) => {
   if (!leg.distance || !leg.duration) return null
 
   const distanceInMiles = (leg.distance?.value / 1000) * 0.6214
-  const cost = distanceInMiles > 10 ? 50 + (distanceInMiles - 15) * 2.5 : 50
+  const cost = distanceInMiles > 10 ? 50 + (distanceInMiles - 10) * 2.5 : 50
   const costTwoDecimals = +cost.toFixed(2)
 
   return (
