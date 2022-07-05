@@ -1,6 +1,15 @@
+import Head from 'next/head'
+
 const ServiceAreas = () => {
   return (
     <div>
+      <Head>
+        <title>
+          Service Areas for Colorado Medicaid Non-Emergency Medical Transport -
+          MedRide
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {/* Top Banner */}
       <div className="bg-orange-500">
         <h1 className="py-4 text-center text-4xl font-bold uppercase tracking-wide text-white">

@@ -1,8 +1,16 @@
+import Head from 'next/head'
 import React from 'react'
 
 function ScheduleARide() {
   return (
     <div>
+      <Head>
+        <title>
+          Schedule a Ride - Colorado Medicaid Non-Emergency Medical Transport -
+          MedRide
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="bg-orange-500">
         <h1 className="py-4 text-center text-4xl font-bold uppercase tracking-wide text-white">
           Schedule A Ride

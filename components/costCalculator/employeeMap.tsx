@@ -4,13 +4,13 @@
 import { useState, useMemo, useCallback, useRef } from 'react'
 import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api'
 import Places from './places'
-import Distance from './distance'
+import EmployeeDistance from './employeeDistance'
 
 type LatLngLiteral = google.maps.LatLngLiteral
 type DirectionsResult = google.maps.DirectionsResult
 type MapOptions = google.maps.MapOptions
 
-const Map = () => {
+const EmployeeMap = () => {
   const [pickup, setPickup] = useState<LatLngLiteral>()
   const [dropoff, setDropoff] = useState<LatLngLiteral>()
   const [directions, setDirections] = useState<DirectionsResult>()
@@ -56,7 +56,7 @@ const Map = () => {
         </p>
       </div>
       {/* MAP */}
-      <div className="my-0 h-1/2 w-auto drop-shadow-xl md:order-2 md:mx-auto md:mt-20 md:mb-10 md:h-96 md:w-3/4">
+      <div className="my-0 h-1/2 w-auto drop-shadow-xl md:order-2 md:mx-auto md:my-20 md:h-96 md:w-3/4">
         <GoogleMap
           zoom={11}
           center={center}
@@ -118,26 +118,16 @@ const Map = () => {
         </div>
         {directions && (
           <div className="hidden px-4 pb-4 md:-mt-2 md:block">
-            <Distance leg={directions.routes[0].legs[0]} />
+            <EmployeeDistance leg={directions.routes[0].legs[0]} />
           </div>
         )}
       </div>
       {/* COST ESTIMATE (MOBILE) */}
       {directions && (
         <div className="md:hidden">
-          <Distance leg={directions.routes[0].legs[0]} />
+          <EmployeeDistance leg={directions.routes[0].legs[0]} />
         </div>
       )}
-      <div className="refundDisclaimer mb-36 mt-10 w-auto px-8 text-xs md:order-3 md:mx-auto md:mt-0 md:mb-20 md:w-3/4 md:px-0">
-        <p className="text-base font-medium">Refunds</p>
-        <p className="italic">
-          **MedRide requires 48 hour advance notice for any cancelation. <br />
-          Cancelations made at least 48 hours in advance of the scheduled trip,
-          will receive a 100% refund. <br />
-          Cancelations made less than 48 hours before the scheduled trip, will
-          incur a 50% charge.
-        </p>
-      </div>
     </div>
   )
 }
@@ -151,4 +141,4 @@ const defaultOptions = {
   visible: true,
 }
 
-export default Map
+export default EmployeeMap
