@@ -59,7 +59,8 @@ const footer = () => {
                 target="_blank"
               >
                 <p>
-                  6005 Delmonico Dr <br />
+                  6005 Delmonico Dr
+                  <br />
                   Suite 200
                 </p>
                 <p>Colorado Springs, CO 80919</p>
