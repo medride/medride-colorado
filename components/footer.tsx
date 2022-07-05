@@ -54,7 +54,10 @@ const footer = () => {
               />
             </svg>
             <div className="pl-4 text-lg text-gray-300">
-              <a href="https://goo.gl/maps/9LLCatqcSm2zRLmJ8" target="_blank">
+              <a
+                href="https://www.google.com/maps/place/6005+Delmonico+Dr+%23200,+Colorado+Springs,+CO+80919,+USA/@38.9188124,-104.8231262,17z/data=!3m1!4b1!4m5!3m4!1s0x87134e386ecb6869:0x2b0b15f3ae1cda2f!8m2!3d38.9188124!4d-104.8231262"
+                target="_blank"
+              >
                 <p>
                   6005 Delmonico Dr <br />
                   Suite 200
