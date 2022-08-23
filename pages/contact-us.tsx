@@ -16,7 +16,7 @@ const ContactUs = () => {
     formState: { errors },
   } = useForm<FormData>()
   const onSubmit = handleSubmit((data) => {
-    console.log('Sending: ', data)
+    // console.log('Sending: ', data)
     fetch('/api/contact', {
       method: 'POST',
       headers: {

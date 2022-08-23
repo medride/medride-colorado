@@ -10,8 +10,8 @@ async function main(req, res) {
         port: 587,
         secure: false,
         auth: {
-            user: process.env.SMPT_USER,
-            pass: process.env.SMPT_PW
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PW
         }
     });
 
