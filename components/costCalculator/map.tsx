@@ -131,10 +131,10 @@ const Map = () => {
       <div className="refundDisclaimer mb-36 mt-10 w-auto px-8 text-xs md:order-3 md:mx-auto md:mt-0 md:mb-20 md:w-3/4 md:px-0">
         <p className="text-base font-medium">Refunds</p>
         <p className="italic">
-          **MedRide requires 48 hour advance notice for any cancelation. <br />
-          Cancelations made at least 48 hours in advance of the scheduled trip,
+          **MedRide requires 48 hour advance notice for any cancellation. <br />
+          Cancellations made at least 48 hours in advance of the scheduled trip,
           will receive a 100% refund. <br />
-          Cancelations made less than 48 hours before the scheduled trip, will
+          Cancellations made less than 48 hours before the scheduled trip, will
           incur a 50% charge.
         </p>
       </div>
