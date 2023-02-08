@@ -4,7 +4,7 @@ const Forms = () => {
   return (
     <div>
       <Head>
-        <title>Consent Form - MedRide</title>
+        <title>Consent Form - MedRide Colorado</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="bg-orange-500">
