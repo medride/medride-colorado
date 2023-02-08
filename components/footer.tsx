@@ -122,7 +122,8 @@ const footer = () => {
             </svg>
             <div className="pl-4 text-lg text-gray-300">
               <a href="https://goo.gl/maps/AZQFKNsDYaTERt318" target="_blank">
-                <p>200 W. Plaza Dr., Suite 250</p>
+                <p>200 Plaza Dr</p>
+                <p>Suite 250</p>
                 <p>Highlands Ranch, CO 80129</p>
               </a>
             </div>
@@ -150,7 +151,9 @@ const footer = () => {
             <div className="pl-4 text-lg text-gray-300">
               <a href="https://goo.gl/maps/qvP6MhfC1pAwbory5" target="_blank">
                 <p>2764 Compass Dr</p>
+                <p>Suite 109</p>
                 <p>Grand Junction, CO 81506</p>
+                <p>(970) 812-0003</p>
               </a>
             </div>
           </div>
