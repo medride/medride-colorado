@@ -6,8 +6,8 @@ function ScheduleARide() {
     <div>
       <Head>
         <title>
-          Schedule a Ride - Colorado Medicaid Non-Emergency Medical Transport -
-          MedRide
+          Schedule a Ride - Colorado Medicaid Non-Emergency Medical Transport
+          (NEMT) - MedRide
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

@@ -1,30 +1,38 @@
-import nodemailer from "nodemailer";
+"use strict";
+const nodemailer = require("nodemailer");
 
-export default async (req, res) => {
+// async..await is not allowed in global scope, must use a wrapper
+async function main(req, res) {
     const { name, email, message } = req.body;
-    const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: "smtp-mail.outlook.com",
+        port: 587,
+        secure: false,
         auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PW
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PW
         }
     });
 
-    try {
-        await transporter.sendMail({
-            from: email,
-            replyTo: email,
-            to: "medridetransportation@gmail.com",
-            subject: `Contact form submission from ${name}`,
-            html: `
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+        from: "medridetech@outlook.com", // sender address
+        replyTo: email,
+        to: "medridetransportation@gmail.com",
+        subject: `Contact form submission from ${name}`,
+        html: `
             <p><strong>From: </strong> ${email}</p>
             <p><strong>Message: </strong> ${message}</p>
             `
-        });
-    } catch (error) {
-        return res.status(500).json({ error: error.message || error.toString() });
-    }
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
     return res.status(200).json({ error: "" });
-};
+
+}
+
+main().catch(console.error);
+export default main

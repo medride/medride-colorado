@@ -71,7 +71,8 @@ const footer = () => {
 
         {/* SATELLITE OFFICE */}
         <div>
-          <p className="mb-2 pb-2 font-medium uppercase">Satellite Office</p>
+          <p className="mb-2 pb-2 font-medium uppercase">Satellite Offices</p>
+
           <div className="mt-2 flex items-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +97,63 @@ const footer = () => {
               <a href="https://goo.gl/maps/9LLCatqcSm2zRLmJ8" target="_blank">
                 <p>267 S Joe Martinez Blvd</p>
                 <p>Pueblo West, CO 81007</p>
+              </a>
+            </div>
+          </div>
+          <div className="mt-2 flex items-start">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <div className="pl-4 text-lg text-gray-300">
+              <a href="https://goo.gl/maps/AZQFKNsDYaTERt318" target="_blank">
+                <p>200 Plaza Dr</p>
+                <p>Suite 250</p>
+                <p>Highlands Ranch, CO 80129</p>
+              </a>
+            </div>
+          </div>
+          <div className="mt-2 flex items-start">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <div className="pl-4 text-lg text-gray-300">
+              <a href="https://goo.gl/maps/qvP6MhfC1pAwbory5" target="_blank">
+                <p>2764 Compass Dr</p>
+                <p>Suite 109</p>
+                <p>Grand Junction, CO 81506</p>
+                <p>(970) 812-0003</p>
               </a>
             </div>
           </div>

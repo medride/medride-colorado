@@ -9,9 +9,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>
-          MedRide Medicaid Transportation | Pueblo Colorado | Southern Colorado
-        </title>
+        <title>MedRide NEMT Transportation | Colorado</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

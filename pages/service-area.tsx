@@ -5,8 +5,8 @@ const ServiceAreas = () => {
     <div>
       <Head>
         <title>
-          Service Areas for Colorado Medicaid Non-Emergency Medical Transport -
-          MedRide
+          Service Areas for Colorado Medicaid Non-Emergency Medical Transport
+          (NEMT) - MedRide
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
