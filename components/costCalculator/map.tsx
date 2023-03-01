@@ -14,9 +14,10 @@ const Map = () => {
   const [pickup, setPickup] = useState<LatLngLiteral>()
   const [dropoff, setDropoff] = useState<LatLngLiteral>()
   const [directions, setDirections] = useState<DirectionsResult>()
+  const [transportationMethod, setTransportationMethod] = useState()
   const mapRef = useRef<GoogleMap>()
   const center = useMemo<LatLngLiteral>(
-    () => ({ lat: 38.2673594, lng: -104.6609081 }),
+    () => ({ lat: 38.8245043, lng: -104.8068821 }),
     []
   )
   const options = useMemo<MapOptions>(
@@ -45,6 +46,10 @@ const Map = () => {
         }
       }
     )
+  }
+
+  const handleSelect = (e) => {
+    setTransportationMethod(e.target.value)
   }
 
   return (
@@ -88,6 +93,16 @@ const Map = () => {
         <div className="h-1/2 p-4 md:flex md:items-start md:justify-between lg:items-center">
           {/* INPUTS */}
           <div className="flex flex-col md:space-y-2 lg:flex-row lg:space-y-0 lg:space-x-4">
+            <select
+              className="mb-2 w-full rounded-sm bg-gray-100 py-2 px-5 pl-2 text-gray-700 md:mb-0"
+              onChange={(e) => handleSelect(e)}
+            >
+              <option value="" hidden>
+                Transportation Method
+              </option>
+              <option value="wheelchair">Wheelchair</option>
+              <option value="ambulatory">Ambulatory</option>
+            </select>
             <Places
               setLocation={(position) => {
                 setPickup(position)
@@ -103,7 +118,9 @@ const Map = () => {
             />
           </div>
           <button
-            disabled={!pickup || !dropoff ? true : false}
+            disabled={
+              !pickup || !dropoff || !transportationMethod ? true : false
+            }
             onClick={() => {
               fetchDirections()
             }}
@@ -118,24 +135,41 @@ const Map = () => {
         </div>
         {directions && (
           <div className="hidden px-4 pb-4 md:-mt-2 md:block">
-            <Distance leg={directions.routes[0].legs[0]} />
+            <Distance
+              leg={directions.routes[0].legs[0]}
+              transportationMethod={transportationMethod}
+            />
           </div>
         )}
       </div>
       {/* COST ESTIMATE (MOBILE) */}
       {directions && (
         <div className="md:hidden">
-          <Distance leg={directions.routes[0].legs[0]} />
+          <Distance
+            leg={directions.routes[0].legs[0]}
+            transportationMethod={transportationMethod}
+          />
         </div>
       )}
-      <div className="refundDisclaimer mb-36 mt-10 w-auto px-8 text-xs md:order-3 md:mx-auto md:mt-0 md:mb-20 md:w-3/4 md:px-0">
+      <div className="refundDisclaimer mb-6 mt-10 w-auto px-8 text-xs md:order-3 md:mx-auto md:mt-0 md:mb-4 md:w-3/4 md:px-0">
         <p className="text-base font-medium">Refunds</p>
         <p className="italic">
-          **MedRide requires 48 hour advance notice for any cancellation. <br />
-          Cancellations made at least 48 hours in advance of the scheduled trip,
+          **MedRide requires 48 hour advance notice for any cancelation. <br />
+          Cancelations made at least 48 hours in advance of the scheduled trip,
           will receive a 100% refund. <br />
-          Cancellations made less than 48 hours before the scheduled trip, will
+          Cancelations made less than 48 hours before the scheduled trip, will
           incur a 50% charge.
+        </p>
+      </div>
+      <div className="locationsOfService mb-36 mt-0 w-auto px-8 text-xs md:order-3 md:mx-auto md:mt-0 md:mb-20 md:w-3/4 md:px-0">
+        <p className="text-base font-medium">Locations of Service</p>
+        <p className="italic">
+          i. Wheelchair services are valid throughout the entire state of
+          Colorado.
+        </p>
+        <p className="italic">
+          ii. Non-Medicaid Ambulatory services must originate in the following
+          Colorado counties: El Paso County.
         </p>
       </div>
     </div>

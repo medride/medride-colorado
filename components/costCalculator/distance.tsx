@@ -5,14 +5,19 @@
 
 type DistanceProps = {
   leg: google.maps.DirectionsLeg
+  transportationMethod: undefined | string
 }
 
-const Distance = ({ leg }: DistanceProps) => {
+const Distance = ({ leg, transportationMethod }: DistanceProps) => {
   if (!leg.distance || !leg.duration) return null
 
   const distanceInMiles = (leg.distance?.value / 1000) * 0.6214
-  const cost = distanceInMiles > 10 ? 50 + (distanceInMiles - 10) * 2.5 : 50
-  const costTwoDecimals = +cost.toFixed(2)
+  const costWHC = distanceInMiles > 10 ? 50 + (distanceInMiles - 10) * 2.5 : 50
+  const costAMB = 10 + distanceInMiles * 2.5
+  const costTwoDecimals =
+    transportationMethod === 'wheelchair'
+      ? +costWHC.toFixed(2)
+      : +costAMB.toFixed(2)
 
   return (
     <div className="text-2xl font-medium text-orange-500">

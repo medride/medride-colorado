@@ -89,10 +89,10 @@ const privatePay = () => {
                   All contracted rates are negotiated with providers and
                   facilities on as as needed basis. Please contact{' '}
                   <a
-                    href="mailto:medridedenver@gmail.com"
+                    href="mailto:info@medrideco.com"
                     className="text-blue-500 underline hover:text-blue-600"
                   >
-                    medridedenver@gmail.com
+                    info@medrideco.com
                   </a>
                   .
                 </p>
