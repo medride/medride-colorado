@@ -121,7 +121,7 @@ const footer = () => {
               />
             </svg>
             <div className="pl-4 text-lg text-gray-300">
-              <a href="https://goo.gl/maps/AZQFKNsDYaTERt318" target="_blank">
+              <a href="https://goo.gl/maps/qvP6MhfC1pAwbory5" target="_blank">
                 <p>200 Plaza Dr</p>
                 <p>Suite 250</p>
                 <p>Highlands Ranch, CO 80129</p>
@@ -149,7 +149,7 @@ const footer = () => {
               />
             </svg>
             <div className="pl-4 text-lg text-gray-300">
-              <a href="https://goo.gl/maps/qvP6MhfC1pAwbory5" target="_blank">
+              <a href="https://goo.gl/maps/AZQFKNsDYaTERt318" target="_blank">
                 <p>2764 Compass Dr</p>
                 <p>Suite 109</p>
                 <p>Grand Junction, CO 81506</p>
