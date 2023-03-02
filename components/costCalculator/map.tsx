@@ -48,7 +48,7 @@ const Map = () => {
     )
   }
 
-  const handleSelect = (e) => {
+  const handleSelect = (e: any) => {
     setTransportationMethod(e.target.value)
   }
 
