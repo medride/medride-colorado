@@ -129,3 +129,9 @@ const ContactUs = () => {
 }
 
 export default ContactUs
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}

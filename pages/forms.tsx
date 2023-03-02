@@ -35,3 +35,9 @@ const Forms = () => {
   )
 }
 export default Forms
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
