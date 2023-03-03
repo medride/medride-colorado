@@ -1,11 +1,10 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import FaqBox from '../components/faqBox'
+import CarImg from '../public/img/medride-car.jpg'
+import HeroImg from '../public/img/medride-hero.jpg'
 
 export default function Home() {
-  const smallHero = '/img/medride-hero-mobile.jpg'
-  const mediumHero = '/img/medride-hero-medium.jpg'
-  const largeHero = '/img/medride-hero.jpg'
-
   return (
     <div className="">
       <Head>
@@ -13,23 +12,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Hero Image */}
-      <picture>
-        <source srcSet={smallHero} media="(max-width: 500px)" />{' '}
-        {/* Mobile-first render */}
-        <source srcSet={mediumHero} media="(max-width: 700px)" />{' '}
-        {/* Large Mobile render */}
-        <img srcSet={largeHero} /> {/* Desktop render */}
-      </picture>
+      <div className="relative h-[75vh] w-full">
+        <Image
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          src={HeroImg}
+          alt="Image showing MedRide sedan and MedRide wheelchair-accessible van"
+        />
+      </div>
 
       {/* SEPERATOR */}
-      {/* <div className='w-full overflow-hidden h-48 bg-orange-400 rounded-full '>
-        <svg className='fill-current text-orange-300' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <p>Hello</p>
-          <path d="M0 0v7.23c0 58.29 268.63 105.54 600 105.54s600-47.25 600-105.54V0Z" />
-        </svg>
-      </div> */}
-
       <div className="flex flex-col bg-orange-500 pt-6 pb-8 text-center text-2xl text-white">
         <p className="pb-4 italic  underline md:pb-2">Offering:</p>
         <div className="flex flex-col justify-evenly space-y-4 font-bold uppercase  md:flex-row md:space-y-0">
@@ -93,7 +86,12 @@ export default function Home() {
           </p>
         </div>
         <div className="right-half mt-16 flex-1 pt-4 lg:mt-0">
-          <img src="/img/medride-car.jpg" alt="" />
+          {/* <div className="relative h-1/3 w-full "> */}
+          <Image
+            src={CarImg}
+            alt="Side-view of MedRide Colorado's NEMT vehicle"
+          />
+          {/* </div> */}
           <h2 className="mb-5 text-3xl font-bold lg:text-3xl">
             Urgent Care Transportation
           </h2>

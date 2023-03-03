@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import NotificationBar from './notificationBar'
+import Image from 'next/image'
+import Logo from '../public/medride-colorado-logo.svg'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -23,10 +25,7 @@ const Navbar = () => {
           {/* logo */}
           <Link href="/">
             <a>
-              <img
-                src="/medride-colorado-logo.svg"
-                className="h-10 pr-2 md:h-14"
-              />
+              <Image src={Logo} alt="MedRide Colorado Logo" height={50} />
             </a>
           </Link>
 

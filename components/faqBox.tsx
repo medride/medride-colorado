@@ -16,7 +16,10 @@ const FaqBox = (props: Props) => {
             <span className="">Q.</span>
             <h3 className="inline">{props.question}</h3>
           </div>
-          <button onClick={() => setVisible(!visible)}>
+          <button
+            aria-label="Show or hide FAQ"
+            onClick={() => setVisible(!visible)}
+          >
             {visible ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"

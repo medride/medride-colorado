@@ -1,14 +1,13 @@
+import Image from 'next/image'
 import React from 'react'
+import Logo from '../public/medride-colorado-logo.svg'
 
 const footer = () => {
   return (
     <div className="flex flex-col bg-gray-800 py-8">
       {/* LOGO  */}
-      <div>
-        <img
-          src="/medride-colorado-logo.svg"
-          className="mb-2 h-10 px-10 md:h-14 lg:mx-auto"
-        />
+      <div className="mb-2 h-10 px-10 md:h-14 lg:mx-auto">
+        <Image src={Logo} alt="MedRide Colorado Logo" height={50} />
       </div>
       <div className="flex flex-col justify-around space-y-10  px-10 py-8 text-xl text-white lg:flex-row lg:space-y-0">
         {/* MAIN OFFICE */}
