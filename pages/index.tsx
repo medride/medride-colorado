@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import FaqBox from '../components/faqBox'
-import CarImg from '../public/img/medride-car.jpg'
-import HeroImg from '../public/img/medride-hero.jpg'
 
 export default function Home() {
   return (
@@ -17,7 +15,7 @@ export default function Home() {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          src={HeroImg}
+          src={'/img/medride-hero.jpg'}
           alt="Image showing MedRide sedan and MedRide wheelchair-accessible van"
         />
       </div>
@@ -86,12 +84,15 @@ export default function Home() {
           </p>
         </div>
         <div className="right-half mt-16 flex-1 pt-4 lg:mt-0">
-          {/* <div className="relative h-1/3 w-full "> */}
-          <Image
-            src={CarImg}
-            alt="Side-view of MedRide Colorado's NEMT vehicle"
-          />
-          {/* </div> */}
+          <div className="relative  w-full ">
+            <Image
+              layout="intrinsic"
+              height={576}
+              width={1361}
+              src="/img/medride-car.jpg"
+              alt="Side-view of MedRide Colorado's NEMT vehicle"
+            />
+          </div>
           <h2 className="mb-5 text-3xl font-bold lg:text-3xl">
             Urgent Care Transportation
           </h2>
