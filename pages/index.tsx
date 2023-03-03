@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Image from 'next/image'
-import FaqBox from '../components/faqBox'
+
+const FaqSection = dynamic(() => import('../components/faqSection'))
 
 export default function Home() {
   return (
@@ -8,6 +10,10 @@ export default function Home() {
       <Head>
         <title>MedRide NEMT Transportation | Colorado</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Get reliable non-emergency medical transportation with MedRide Colorado. Available 24/7 for Health First Colorado members without transportation. Hassle-free rides to your appointments, whenever you need them."
+        />
       </Head>
 
       <div className="relative h-[75vh] w-full">
@@ -109,27 +115,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="h-3/4 bg-[url('/img/background-decorator.jpg')] pb-20">
-        <h2 className="px-4 pt-20 pb-10 text-center text-3xl lg:px-0">
-          Frequently Asked Questions
-        </h2>
-        <FaqBox
-          question="What are the hours of operation?"
-          answer="Our office and scheduling hours are Monday – Friday 6:00am –
-              7:00pm. Transportation hours are 24/7"
-        />
-        <FaqBox
-          question="Is there a limit on NEMT?"
-          answer="There is no limit to the number of daily trips an eligible member
-            can receive from MedRide."
-        />
-        <FaqBox
-          question="Where can a member be transported using NEMT?"
-          answer="NEMT can only be provided to services covered by Health First
-            Colorado. NEMT is not available for picking up prescriptions,
-            picking up medical equipment, completing interviews or paperwork."
-        />
-      </section>
+      <FaqSection />
     </div>
   )
 }

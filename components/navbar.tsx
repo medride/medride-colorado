@@ -33,13 +33,15 @@ const Navbar = () => {
           <div className="hidden items-center space-x-8 pr-2 xl:flex 2xl:pr-24">
             {/* primary nav */}
             <div>
-              <ul className="space-x-4 text-xl font-medium uppercase text-gray-700 xl:space-x-5 xl:text-lg 2xl:space-x-10 2xl:text-xl">
+              <ul className="flex flex-row space-x-4 text-xl font-medium uppercase text-gray-700 xl:space-x-5 xl:text-lg 2xl:space-x-10 2xl:text-xl">
                 {links.map((link) => (
-                  <Link key={link.name} href={link.link}>
-                    <a className="hover:font-medium hover:text-orange-500 hover:underline">
-                      {link.name}
-                    </a>
-                  </Link>
+                  <li key={link.name}>
+                    <Link href={link.link}>
+                      <a className="hover:font-medium hover:text-orange-500 hover:underline">
+                        {link.name}
+                      </a>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>

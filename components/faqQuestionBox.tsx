@@ -5,7 +5,7 @@ export interface Props {
   answer: string
 }
 
-const FaqBox = (props: Props) => {
+const FaqQuestionBox = (props: Props) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -57,4 +57,4 @@ const FaqBox = (props: Props) => {
   )
 }
 
-export default FaqBox
+export default FaqQuestionBox
