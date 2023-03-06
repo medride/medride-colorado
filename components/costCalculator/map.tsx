@@ -2,9 +2,11 @@
 // https://www.youtube.com/watch?v=2po9_CIRW7I
 
 import { useState, useMemo, useCallback, useRef } from 'react'
+import dynamic from 'next/dynamic'
 import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api'
-import Places from './places'
-import Distance from './distance'
+
+const Places = dynamic(() => import('./places'))
+const Distance = dynamic(() => import('./distance'))
 
 type LatLngLiteral = google.maps.LatLngLiteral
 type DirectionsResult = google.maps.DirectionsResult
