@@ -17,6 +17,10 @@ const privatePay = () => {
       <Head>
         <title>Private Pay Wheelchair Transport in Colorado</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Choose MedRide's Non-Emergency Medical Transportation for hassle-free, comfortable private pay transportation. Get where you need to go with confidence."
+        />
       </Head>
       <Map />
       <section className="mx-auto -mt-28 mb-10 w-auto px-8 text-gray-700 md:mt-0 md:w-3/4 md:px-0">

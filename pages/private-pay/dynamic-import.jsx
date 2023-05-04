@@ -170,7 +170,12 @@ export default function LowerContent() {
           </h2>
           <div className="relative flex h-36 w-36 items-center justify-center xl:mx-auto xl:h-40">
             <a href="/docs/MedRide-Trifold-Brochure.pdf" target="_blank">
-              <Image src="/img/pdf-icon.png" className="" layout="fill" />
+              <Image
+                src="/img/pdf-icon.png"
+                className=""
+                layout="fill"
+                alt="Icon for PDF brochure"
+              />
             </a>
           </div>
         </div>

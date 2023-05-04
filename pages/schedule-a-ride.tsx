@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import React from 'react'
 
 function ScheduleARide() {
@@ -16,13 +17,24 @@ function ScheduleARide() {
           Schedule A Ride
         </h1>
       </div>
-      <div className="bg-[url('/img/background-decorator2.png')] pb-4 lg:h-screen">
-        <div className="mx-auto flex w-3/4 flex-col xl:w-5/12">
-          <p className="pt-10 pb-8 text-center text-xl font-bold lg:pt-16 lg:text-3xl">
-            PLEASE CONTACT MEDRIDE TRANSPORTATION TO SCHEDULE A RIDE. FOR ANY
-            ADDITIONAL QUESTIONS YOU CAN CONTACT US AT:
+      <div className="min-h-screen bg-[url('/img/background-decorator2.png')] md:min-h-full ">
+        <div className="mx-auto flex w-3/4 flex-col items-center justify-center gap-8 pt-10 pb-8 md:flex-row md:gap-16 lg:pt-16">
+          <p className="order-2 w-full text-4xl font-bold tracking-tight text-gray-700 dark:text-white md:order-1 md:w-1/2">
+            Pleae contact MedRide transportation to schedule a ride. For any
+            additional questions you can contact us at:
           </p>
-          <p className="pb-6 text-4xl font-bold text-orange-500 lg:pb-4">
+          <div className="order-1 w-full md:order-2 md:w-3/4">
+            <Image
+              src="/img/medride-colorado-vehicle-red-rocks.jpg"
+              alt="MedRide vehicle driving through the mountains"
+              width={450}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+        <div className="mx-auto flex w-3/4 flex-col pb-6 xl:w-5/12">
+          <p className="pb-4 text-4xl font-bold text-orange-500">
             MedRide (719) 545-3333
           </p>
           <p className="pb-6 text-xl lg:pb-4">
@@ -35,7 +47,7 @@ function ScheduleARide() {
             To schedule your service, please have the following information
             ready:
           </p>
-          <ul className="list-disc pl-2">
+          <ul className="list-disc pl-2 pb-10">
             <li className="pb-4 pt-6 lg:pb-2 lg:pt-4">
               Your{' '}
               <span className="font-bold">

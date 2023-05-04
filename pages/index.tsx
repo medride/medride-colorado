@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Image from 'next/image'
+import VideoBackground from '../components/videoBackground'
 
 const FaqSection = dynamic(() => import('../components/faqSection'))
 
@@ -16,14 +17,16 @@ export default function Home() {
         />
       </Head>
 
-      <div className="relative h-[75vh] w-full">
-        <Image
+      <div className="relative">
+        <VideoBackground />
+        {/* <div className="relative h-[75vh] w-full"> */}
+        {/* <Image
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           src={'/img/medride-hero.jpg'}
           alt="Image showing MedRide sedan and MedRide wheelchair-accessible van"
-        />
+        /> */}
       </div>
 
       {/* SEPERATOR */}
@@ -38,6 +41,9 @@ export default function Home() {
 
       <section className="mx-auto flex max-w-6xl flex-col space-x-0 py-16 px-10 md:px-20 lg:flex-row lg:space-x-14 xl:px-0">
         <div className="left-half flex-1">
+          <h1 className="-mt-4 mb-4 font-medium text-gray-900">
+            MedRide NEMT Transportation | Colorado
+          </h1>
           <h2 className="mb-5 text-3xl font-extrabold text-orange-500 lg:text-4xl">
             Colorado Medicaid Transportation
           </h2>

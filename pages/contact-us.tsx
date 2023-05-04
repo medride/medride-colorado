@@ -10,11 +10,13 @@ type FormData = {
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false)
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>()
+
   const onSubmit = handleSubmit((data) => {
     // console.log('Sending: ', data)
     fetch('/api/contact', {

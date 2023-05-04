@@ -51,7 +51,10 @@ const Navbar = () => {
 
           {/* Hamburger */}
           <div className="cursor-pointer xl:hidden">
-            <button onClick={() => setOpen(!open)}>
+            <button
+              onClick={() => setOpen(!open)}
+              aria-label="Hamburger button"
+            >
               {open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
