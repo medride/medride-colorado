@@ -42,12 +42,9 @@ const privatePay = () => {
               our drivers excellently trained in order to keep you safe.
             </p>
           </div>
-          <div className="h-80 w-auto bg-[url('/img/wheelchair-transportation-colorado.jpg')] bg-contain bg-no-repeat md:mt-12 lg:mt-12 lg:h-auto lg:w-2/5 2xl:mt-0">
-            {/* <img
-              src="/img/wheelchair-transportation-colorado.jpg"
-              className="h-96 justify-start"
-            /> */}
-          </div>
+          <div className="h-80 w-auto bg-[url('/img/medride-colorado-private-pay.jpg')] bg-contain bg-no-repeat md:mt-12 lg:mt-12 lg:h-auto lg:w-2/5 2xl:mt-0"></div>
+          {/* TESTIMONIAL */}
+          {/* It is such a relief not to worry about how I am going to get to my appointments. The drivers have always been nice and helpful. */}
         </div>
       </section>
       <LowerContent />

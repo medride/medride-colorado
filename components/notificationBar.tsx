@@ -68,7 +68,7 @@ function NotificationBar() {
         </Link>
 
         {/* Twitter */}
-        <Link href="https://twitter.com/medridetranspo1">
+        <Link href="https://twitter.com/medridecolorado">
           <a target="_blank">
             <svg
               role="img"
