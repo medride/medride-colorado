@@ -103,6 +103,7 @@ export default function Home() {
               height="180"
               src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
               title="YouTube video player"
+              // @ts-ignore
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
@@ -123,6 +124,7 @@ export default function Home() {
               height="219"
               src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
               title="YouTube video player"
+              // @ts-ignore
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
@@ -135,6 +137,7 @@ export default function Home() {
               height="315"
               src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
               title="YouTube video player"
+              // @ts-ignore
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
