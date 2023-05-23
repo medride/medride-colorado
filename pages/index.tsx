@@ -95,28 +95,65 @@ export default function Home() {
             program and, therefore, is not an eligibility group.
           </p>
         </div>
-        <div className="right-half mt-16 flex-1 pt-4 lg:mt-0">
-          <div className="relative  w-full ">
-            <Image
+        <div className="right-half mt-16 flex flex-1 flex-col justify-center pt-4 lg:mt-0">
+          <div className="md:hidden">
+            <iframe
+              className="mb-4 rounded-lg"
+              width="320"
+              height="180"
+              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            {/* <Image
               layout="intrinsic"
               height={576}
               width={1361}
               src="/img/medride-car.jpg"
               alt="Side-view of MedRide Colorado's NEMT vehicle"
-            />
+            /> */}
           </div>
-          <h2 className="mb-5 text-3xl font-bold lg:text-3xl">
-            Urgent Care Transportation
-          </h2>
-          <p className="pb-2 text-2xl">
-            Urgent care transportation is permissible if…
-          </p>
-          <p className="pt-4 text-xl lg:pt-0">
-            A client is in need of transportation outside of normal physician
-            office hours to a care facility but is not in an emergency event.
-            This facility may include a Trauma Center if this is the nearest and
-            most appropriate facility.
-          </p>
+          <div className="hidden md:inline-block xl:hidden">
+            <iframe
+              className="mb-4 rounded-lg"
+              width="390"
+              height="219"
+              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className="hidden xl:inline-block">
+            <iframe
+              className="mb-4 rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <h2 className="mb-5 text-3xl font-bold lg:text-3xl">
+              Urgent Care Transportation
+            </h2>
+            <p className="pb-2 text-2xl">
+              Urgent care transportation is permissible if…
+            </p>
+            <p className="pt-4 text-xl lg:pt-0">
+              A client is in need of transportation outside of normal physician
+              office hours to a care facility but is not in an emergency event.
+              This facility may include a Trauma Center if this is the nearest
+              and most appropriate facility.
+            </p>
+          </div>
         </div>
       </section>
 

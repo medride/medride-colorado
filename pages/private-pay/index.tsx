@@ -4,6 +4,7 @@ import { useLoadScript } from '@react-google-maps/api'
 import Map from '../../components/costCalculator/map'
 
 const LowerContent = dynamic(() => import('./dynamic-import'))
+const Separator = dynamic(() => import('../../components/separator'))
 
 const privatePay = () => {
   const { isLoaded } = useLoadScript({
@@ -47,6 +48,51 @@ const privatePay = () => {
           {/* It is such a relief not to worry about how I am going to get to my appointments. The drivers have always been nice and helpful. */}
         </div>
       </section>
+      <Separator>
+        {/* <figure className="flex flex-col items-center">
+          <blockquote className="w-3/4 text-center text-xl font-semibold italic leading-8 sm:text-2xl sm:leading-9">
+            <p>
+              "It is such a relief not to worry about how I am going to get to
+              my appointments. The drivers have always been nice and helpful."
+            </p>
+          </blockquote>
+          <figcaption className="mt-10">
+            <img
+              className="mx-auto h-10 w-10 rounded-full"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
+            />
+            <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+              <div className="t font-semibold text-white">Judith Black</div>
+            </div>
+          </figcaption>
+        </figure> */}
+        <figure className="grid w-3/4 grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
+          <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
+            <blockquote className="text-xl font-semibold italic leading-8 text-white sm:text-2xl sm:leading-9">
+              <p>
+                "It is such a relief not to worry about how I am going to get to
+                my appointments. The drivers have always been nice and helpful."
+              </p>
+            </blockquote>
+          </div>
+          <div className="col-end-1 hidden w-32 rounded-xl border-4 border-white lg:row-span-4 lg:inline-block lg:w-72 lg:rounded-3xl">
+            <img
+              className="-scale-x-100 transform rounded-xl bg-indigo-50 lg:rounded-3xl"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+          </div>
+          <figcaption className="flex items-center justify-center text-base lg:col-start-1 lg:row-start-3">
+            <img
+              className="mr-4 inline-flex w-16 -scale-x-100 transform rounded-xl bg-indigo-50 lg:hidden lg:rounded-3xl"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+            <div className="font-bold text-white">- Judith Black</div>
+          </figcaption>
+        </figure>
+      </Separator>
       <LowerContent />
     </div>
   )
