@@ -26,7 +26,10 @@ const Forms = () => {
           {/* PDF Icon */}
           {/* TODO: Check how the site looks on medium-sized screens */}
           <div className="mb-4 basis-full md:mb-16 lg:mb-0 lg:basis-1/3">
-            <a href="/docs/MedRide-Application-2021-1.pdf" target="_blank">
+            <a
+              href="/docs/Medicaid-Level-of-Service-Application.pdf"
+              target="_blank"
+            >
               <img src="/img/pdf-icon.png" className="h-32 xl:h-40" />
             </a>
           </div>

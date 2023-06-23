@@ -24,6 +24,10 @@ export default function LowerContent() {
                     <span className="font-medium">
                       Monday - Friday | 6AM - 7PM
                     </span>
+                    <br />
+                    <span className="font-medium">
+                      Saturday - Sunday | 6AM - 5PM
+                    </span>
                   </p>
                   <p className="pb-2 font-medium text-orange-900">
                     Rides are available 24/7

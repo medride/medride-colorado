@@ -182,6 +182,14 @@ const footer = () => {
               <p className="text-gray-300">Friday</p>
               <p>6AM-7PM</p>
             </div>
+            <div className="flex justify-between space-x-20">
+              <p className="text-gray-300">Saturday</p>
+              <p>6AM-5PM</p>
+            </div>
+            <div className="flex justify-between space-x-20">
+              <p className="text-gray-300">Sunday</p>
+              <p>6AM-5PM</p>
+            </div>
           </div>
         </div>
         <div className="md:w-1/4">
