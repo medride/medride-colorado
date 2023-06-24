@@ -101,7 +101,7 @@ export default function Home() {
               className="mb-4 rounded-lg"
               width="320"
               height="180"
-              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              src="https://www.youtube.com/embed/WMq8tH4QpA4?controls=0"
               title="YouTube video player"
               // @ts-ignore
               frameborder="0"
@@ -122,7 +122,7 @@ export default function Home() {
               className="mb-4 rounded-lg"
               width="390"
               height="219"
-              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              src="https://www.youtube.com/embed/WMq8tH4QpA4?controls=0"
               title="YouTube video player"
               // @ts-ignore
               frameborder="0"
@@ -135,7 +135,7 @@ export default function Home() {
               className="mb-4 rounded-lg"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/ykIVXWzuHo0?controls=0"
+              src="https://www.youtube.com/embed/WMq8tH4QpA4?controls=0"
               title="YouTube video player"
               // @ts-ignore
               frameborder="0"
