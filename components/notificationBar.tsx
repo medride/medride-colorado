@@ -27,7 +27,7 @@ function NotificationBar() {
         </div>
         <p className="hidden lg:inline-block">|</p>
         <p className="hidden md:text-base lg:inline-block xl:text-lg">
-          Call to schedule Monday to Friday 6AM-7PM
+          Call to schedule: Mon-Fri 6AM-7PM or Weekends 6AM-5PM
         </p>
         <p className="hidden md:inline-block">|</p>
         <p className="hidden uppercase md:inline-block md:text-base xl:text-lg">
