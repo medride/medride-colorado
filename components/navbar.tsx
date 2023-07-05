@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="hidden items-center space-x-8 pr-2 xl:flex 2xl:pr-24">
             {/* primary nav */}
             <div>
-              <ul className="flex flex-row space-x-4 text-xl font-medium uppercase text-gray-700 xl:space-x-5 xl:text-lg 2xl:space-x-10 2xl:text-xl">
+              <ul className="flex flex-row space-x-4 text-lg font-medium uppercase text-gray-700 xl:space-x-5 xl:text-lg 2xl:space-x-10 ">
                 {links.map((link) => (
                   <li key={link.name}>
                     <Link href={link.link}>
@@ -45,8 +45,6 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-
-            {/* secondary nav would go here */}
           </div>
 
           {/* Hamburger */}

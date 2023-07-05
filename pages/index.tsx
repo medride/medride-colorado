@@ -95,8 +95,8 @@ export default function Home() {
             program and, therefore, is not an eligibility group.
           </p>
         </div>
-        <div className="right-half mt-16 flex flex-1 flex-col justify-center pt-4 lg:mt-0">
-          <div className="md:hidden">
+        <div className="right-half mt-16 flex flex-1 flex-col items-center justify-center pt-4 lg:mt-0">
+          <div className="mb-10 md:hidden">
             <iframe
               className="mb-4 rounded-lg"
               width="320"
@@ -108,16 +108,8 @@ export default function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-
-            {/* <Image
-              layout="intrinsic"
-              height={576}
-              width={1361}
-              src="/img/medride-car.jpg"
-              alt="Side-view of MedRide Colorado's NEMT vehicle"
-            /> */}
           </div>
-          <div className="hidden md:inline-block xl:hidden">
+          <div className="mb-14 hidden md:inline-block xl:hidden">
             <iframe
               className="mb-4 rounded-lg"
               width="390"
