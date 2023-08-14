@@ -171,7 +171,7 @@ const Map = () => {
         </p>
         <p className="italic">
           ii. Non-Medicaid Ambulatory services must originate in the following
-          Colorado counties: El Paso County.
+          Colorado counties: El Paso County and Pueblo County.
         </p>
       </div>
     </div>
