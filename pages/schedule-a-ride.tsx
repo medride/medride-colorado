@@ -20,7 +20,7 @@ function ScheduleARide() {
       <div className="min-h-screen bg-[url('/img/background-decorator2.png')] md:min-h-full ">
         <div className="mx-auto flex w-3/4 flex-col items-center justify-center gap-8 pt-10 pb-8 md:flex-row md:gap-16 lg:pt-16">
           <p className="order-2 w-full text-4xl font-bold tracking-tight text-gray-700 dark:text-white md:order-1 md:w-1/2">
-            Pleae contact MedRide transportation to schedule a ride. For any
+            Please contact MedRide transportation to schedule a ride. For any
             additional questions you can contact us at:
           </p>
           <div className="order-1 w-full md:order-2 md:w-3/4">
