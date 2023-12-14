@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 const ServiceAreas = () => {
   return (
@@ -25,11 +26,19 @@ const ServiceAreas = () => {
         </p>
       </div>
       {/* IMG - Service Areas */}
-      <img
-        src="/img/medride-colorado-service-area.jpg"
-        alt=""
-        className="mx-auto"
-      />
+      <div className="mx-auto w-3/5 ">
+        <Image
+          src="/img/medride-colorado-service-area-map.jpg"
+          alt="Medride Colorado Service Area Map"
+          width={1861}
+          height={1711}
+        />
+        {/* <img
+          src="/img/medride-colorado-service-area-map.jpg"
+          alt=""
+          className=""
+        /> */}
+      </div>
       {/* Table */}
       <div className="mx-auto flex w-5/6 flex-col justify-center py-6 pl-24 text-2xl md:w-3/4 md:flex-row md:space-x-12 md:pl-10 lg:space-x-20 xl:space-x-28">
         <div>
