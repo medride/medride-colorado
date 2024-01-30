@@ -100,10 +100,10 @@ const employment = () => {
                 Qualified and interested applicants must complete MedRide’s
                 employment application and submit it via email to
                 <a
-                  href="mailto:medridepueblohr@gmail.com"
+                  href="mailto:medridetransportation@gmail.com"
                   className="font-bold text-sky-500 hover:text-sky-400"
                 >
-                  &nbsp; medridepueblohr@gmail.com
+                  &nbsp; medridetransportation@gmail.com
                 </a>
                 .
               </p>
