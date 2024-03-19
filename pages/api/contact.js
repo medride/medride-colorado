@@ -19,8 +19,7 @@ async function main(req, res) {
     const mailData = {
         from: "medridetech@outlook.com", // sender address
         replyTo: email,
-        to: "medridetech@gmail.com",
-        // to: "medridetransportation@gmail.com",
+        to: "medridetransportation@gmail.com",
         subject: `Contact form submission from ${name}`,
         html: `
             <p><strong>From: </strong> ${email}</p>
