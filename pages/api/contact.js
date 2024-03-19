@@ -3,6 +3,7 @@ const nodemailer = require("nodemailer");
 
 // async..await is not allowed in global scope, must use a wrapper
 async function main(req, res) {
+    console.log("in api");
     const { name, email, message } = req.body;
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({

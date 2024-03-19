@@ -8,8 +8,11 @@ type FormData = {
   message: string
 }
 
+type SubmitStatus = 'idle' | 'submitting' | 'succeeded' | 'failed'
+
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle')
 
   const {
     register,
@@ -18,7 +21,8 @@ const ContactUs = () => {
   } = useForm<FormData>()
 
   const onSubmit = handleSubmit((data) => {
-    // console.log('Sending: ', data)
+    setSubmitStatus('submitting')
+
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -26,12 +30,22 @@ const ContactUs = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        console.log('Message sent!')
-        setSubmitted(true)
-      }
     })
+      .then((res) => {
+        if (res.status === 200) {
+          console.log('Message sent!')
+          setSubmitStatus('succeeded')
+        } else {
+          // If the server responds with a non-200 status, we assume it's an error.
+          console.error('Failed to send message: ', res.status)
+          setSubmitStatus('failed')
+        }
+      })
+      .catch((error) => {
+        // This will catch any network error.
+        console.error('Network error: ', error)
+        setSubmitStatus('failed')
+      })
   })
 
   return (
@@ -55,7 +69,10 @@ const ContactUs = () => {
                   className="w-full border-2 py-4 pl-4 "
                   placeholder="Name"
                   {...register('name', { required: true, maxLength: 50 })}
-                  disabled={submitted}
+                  disabled={
+                    submitStatus === 'submitting' ||
+                    submitStatus === 'succeeded'
+                  }
                 />
                 {errors.name?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
@@ -79,7 +96,10 @@ const ContactUs = () => {
                     pattern:
                       /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,
                   })}
-                  disabled={submitted}
+                  disabled={
+                    submitStatus === 'submitting' ||
+                    submitStatus === 'succeeded'
+                  }
                 />
                 {errors.email?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
@@ -100,16 +120,24 @@ const ContactUs = () => {
                   placeholder="Message"
                   rows={10}
                   {...register('message', { required: true, maxLength: 5000 })}
-                  disabled={submitted}
+                  disabled={
+                    submitStatus === 'submitting' ||
+                    submitStatus === 'succeeded'
+                  }
                 />
                 {errors.message?.type === 'required' && (
                   <span className="pl-3 text-base italic text-red-500">
                     A message is required
                   </span>
                 )}
-                {submitted && (
-                  <span className="bg text-green-500">
+                {submitStatus === 'succeeded' && (
+                  <span className="text-green-500">
                     Message successfully sent!
+                  </span>
+                )}
+                {submitStatus === 'failed' && (
+                  <span className="italic text-red-500">
+                    Something went wrong. Please try again.
                   </span>
                 )}
               </div>
@@ -117,11 +145,19 @@ const ContactUs = () => {
             <button
               type="submit"
               className={`${
-                submitted ? 'bg-slate-400' : 'bg-green-400'
+                submitStatus === 'submitting' || submitStatus === 'succeeded'
+                  ? 'bg-slate-400'
+                  : 'bg-green-400'
               } py-4 px-6 text-xl font-medium text-white`}
-              disabled={submitted}
+              disabled={
+                submitStatus === 'submitting' || submitStatus === 'succeeded'
+              }
             >
-              Submit
+              {submitStatus === 'idle' || submitStatus === 'failed'
+                ? 'Submit'
+                : submitStatus === 'submitting'
+                ? 'Submitting'
+                : 'Success'}
             </button>
           </form>
         </div>
