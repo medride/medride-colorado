@@ -16,19 +16,31 @@ async function main(req, res) {
         }
     });
 
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
+    const mailData = {
         from: "medridetech@outlook.com", // sender address
         replyTo: email,
-        to: "medridetransportation@gmail.com",
+        to: "medridetech@gmail.com",
+        // to: "medridetransportation@gmail.com",
         subject: `Contact form submission from ${name}`,
         html: `
             <p><strong>From: </strong> ${email}</p>
             <p><strong>Message: </strong> ${message}</p>
             `
+    }
+
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, (err, info) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                console.log(info);
+                resolve(info);
+            }
+        });
     });
 
-    console.log("Message sent: %s", info.messageId);
+    console.log("Message sent: %s", mailData.messageId);
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     return res.status(200).json({ error: "" });
