@@ -51,11 +51,11 @@ const ServiceAreas = () => {
             <li className="pb-2 md:pb-0">Cheyenne</li>
             <li className="pb-2 md:pb-0">Crowley</li>
             <li className="pb-2 md:pb-0">Custer</li>
+            <li className="pb-2 md:pb-0">Costilla</li>
           </ul>
         </div>
         <div>
           <ul className="list-outside list-disc">
-            <li className="pb-2 md:pb-0">Costilla</li>
             <li className="pb-2 md:pb-0">Conejos</li>
             <li className="pb-2 md:pb-0">Delta</li>
             <li className="pb-2 md:pb-0">Eagle</li>
@@ -63,44 +63,50 @@ const ServiceAreas = () => {
             <li className="pb-2 md:pb-0">El Paso</li>
             <li className="pb-2 md:pb-0">Fremont</li>
             <li className="pb-2 md:pb-0">Garfield</li>
+            <li className="pb-2 md:pb-0">Gunnison</li>
+            <li className="pb-2 md:pb-0">Grand</li>
           </ul>
         </div>
         <div>
           <ul className="list-outside list-disc">
-            <li className="pb-2 md:pb-0">Gunnison</li>
-            <li className="pb-2 md:pb-0">Grand</li>
             <li className="pb-2 md:pb-0">Hinsdale</li>
             <li className="pb-2 md:pb-0">Huefano</li>
             <li className="pb-2 md:pb-0">Jackson</li>
             <li className="pb-2 md:pb-0">Kioa</li>
             <li className="pb-2 md:pb-0">Kit Carson</li>
             <li className="pb-2 md:pb-0">Las Animas</li>
+            <li className="pb-2 md:pb-0">Lake</li>
+            <li className="pb-2 md:pb-0">Lincoln</li>
+            <li className="pb-2 md:pb-0">Logan</li>
+            <li className="pb-2 md:pb-0">Mesa</li>
           </ul>
         </div>
         <div>
           <ul className="list-outside list-disc">
-            <li className="pb-2 md:pb-0">Lake</li>
-            <li className="pb-2 md:pb-0">Lincoln</li>
-            <li className="pb-2 md:pb-0">Mesa</li>
             <li className="pb-2 md:pb-0">Mineral</li>
             <li className="pb-2 md:pb-0">Moffat</li>
             <li className="pb-2 md:pb-0">Montrose</li>
+            <li className="pb-2 md:pb-0">Morgan</li>
             <li className="pb-2 md:pb-0">Otero</li>
             <li className="pb-2 md:pb-0">Ouray</li>
             <li className="pb-2 md:pb-0">Park</li>
+            <li className="pb-2 md:pb-0">Phillips</li>
+            <li className="pb-2 md:pb-0">Pitkin</li>
+            <li className="pb-2 md:pb-0">Prowers</li>
           </ul>
         </div>
         <div>
           <ul className="list-outside list-disc">
-            <li className="pb-2 md:pb-0">Pitkin</li>
-            <li className="pb-2 md:pb-0">Prowers</li>
             <li className="pb-2 md:pb-0">Pueblo</li>
             <li className="pb-2 md:pb-0">Rio Blanco</li>
             <li className="pb-2 md:pb-0">Rio Grande</li>
             <li className="pb-2 md:pb-0">Routt</li>
             <li className="pb-2 md:pb-0">Saguache</li>
+            <li className="pb-2 md:pb-0">Sedgwick</li>
             <li className="pb-2 md:pb-0">Summit</li>
             <li className="pb-2 md:pb-0">Teller</li>
+            <li className="pb-2 md:pb-0">Washington</li>
+            <li className="pb-2 md:pb-0">Yuma</li>
           </ul>
         </div>
       </div>
